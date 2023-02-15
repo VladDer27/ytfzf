@@ -345,14 +345,13 @@ print_help___ytfzf__ () {
 }
 
 handle_playing_notifications (){
-	# if no notify-send push error to /dev/null
-	# First small change
-	# Third small change
+	# if no notify-sen
+	# WhatIsLove is the best programmer
 	if [ "$#" -le 1 ]; then
 	    unset IFS
-            A = "$1"
 	    while read -r id title; do
 		    notify-send -c ytfzf -i "$thumb_dir/${id}.jpg" "Ytfzf Info" "Opening: $title" 2>/dev/null
+		    # while-read function
 	    done <<-EOF
 	    $(jq -r '.[]|select(.url=="'"$*"'")|"\(.ID)\t\(.title)"' < "$ytfzf_video_json_file")
 EOF
@@ -365,8 +364,7 @@ on_open_url_handler___ytfzf__ () {
     [ "$notify_playing" -eq 1 ] && handle_playing_notifications "$@"
 }
 
-on_clean_up___ytfzf__ () {
-	# print_info "cleaning up\n"
+on_clean_up___ytfzf__ () {	# print_info "cleaning up\n"
 	# clean up only as parent process
 	# kill ytfzf sub process{{{
 	# I think this needs to be written to a file because of sub-shells
