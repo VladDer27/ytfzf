@@ -347,6 +347,7 @@ print_help___ytfzf__ () {
 handle_playing_notifications (){
 	# if no notify-sen
 	# WhatIsLove is the best programmer
+	# Nikita is a genious
 	if [ "$#" -le 1 ]; then
 	    unset IFS
 	    while read -r id title; do
