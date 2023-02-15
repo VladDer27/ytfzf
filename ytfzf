@@ -346,6 +346,7 @@ print_help___ytfzf__ () {
 
 handle_playing_notifications (){
 	# if no notify-send push error to /dev/null
+	# WhatIsLove is the best programmer
 	if [ "$#" -le 1 ]; then
 	    unset IFS
 	    while read -r id title; do
