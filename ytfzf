@@ -351,6 +351,7 @@ handle_playing_notifications (){
 	    unset IFS
 	    while read -r id title; do
 		    notify-send -c ytfzf -i "$thumb_dir/${id}.jpg" "Ytfzf Info" "Opening: $title" 2>/dev/null
+		    # while-read function
 	    done <<-EOF
 	    $(jq -r '.[]|select(.url=="'"$*"'")|"\(.ID)\t\(.title)"' < "$ytfzf_video_json_file")
 EOF
