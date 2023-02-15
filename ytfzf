@@ -364,7 +364,8 @@ on_open_url_handler___ytfzf__ () {
     [ "$notify_playing" -eq 1 ] && handle_playing_notifications "$@"
 }
 
-on_clean_up___ytfzf__ () {	# print_info "cleaning up\n"
+on_clean_up___ytfzf__ () {
+	# print_info "cleaning up\n"
 	# clean up only as parent process
 	# kill ytfzf sub process{{{
 	# I think this needs to be written to a file because of sub-shells
