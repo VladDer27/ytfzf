@@ -347,6 +347,7 @@ print_help___ytfzf__ () {
 handle_playing_notifications (){
 	# if no notify-send push error to /dev/null
 	# First small change
+	# Third small change
 	if [ "$#" -le 1 ]; then
 	    unset IFS
             A = "$1"
